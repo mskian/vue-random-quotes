@@ -17,5 +17,5 @@ jobs:
     - name: use yarn
       run: |
        yarn install
-       yarn build
        yarn generate
+       yarn build
