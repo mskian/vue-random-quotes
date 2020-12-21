@@ -29,7 +29,7 @@
               {{ loading ? "Loading data..." : "🔄 Random" }}
             </button>
             <button
-              v-clipboard:copy="results.quotes"
+              v-clipboard:copy="'❛'+ results.quotes +'❜\n\n~' + results.author"
               v-clipboard:success="onCopy"
               v-clipboard:error="onError"
               class="btn button is-link read-random"
