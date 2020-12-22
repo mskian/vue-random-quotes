@@ -17,16 +17,16 @@
             </button>
           </div>
           <div class="notification has-text-weight-bold read-more">
-            <p>{{ loading ? "Loading data..." : results.quotes }}</p>
+            <p>{{ results.quotes }}</p>
             <br>
           </div>
           <p class="has-text-white">
-            💌 {{ loading ? "Loading data..." : results.author }}
+            💌 {{ loading ? "Loading Data" : results.author }}
           </p>
           <br>
           <div class="buttons is-centered">
             <button class="button is-success read-random" @click.prevent="getResult">
-              {{ loading ? "Loading data..." : "🔄 Random" }}
+              {{ loading ? "🔄 New Quotes" : "🔄 Random" }}
             </button>
             <button
               v-clipboard:copy="results.quotes +'\n\n💌 ' + results.author"
@@ -54,7 +54,8 @@ export default {
   data () {
     return {
       showInstallPrompt: null,
-      results: {}
+      results: {},
+      loading: false
     }
   },
   async mounted () {
