@@ -35,6 +35,13 @@ export default {
         content: 'San Quotes'
       },
       {
+        hid: 'og:image',
+        property: 'og:image',
+        content: 'https://quotes.santhoshveer.com/media/random-quotes.png'
+      }
+    ],
+    link: [
+      {
         rel: 'shortcut icon',
         href: '/icons/Icon-32.png'
       },
@@ -68,11 +75,7 @@ export default {
         sizes: '512x512',
         href: '/icons/Icon-192.png'
       },
-      {
-        hid: 'og:image',
-        property: 'og:image',
-        content: 'https://quotes.santhoshveer.com/media/random-quotes.png'
-      }
+      { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' }
     ]
   },
   loading: { color: '#e84b0d' },

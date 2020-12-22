@@ -17,11 +17,11 @@
             </button>
           </div>
           <div class="notification has-text-weight-bold read-more">
-            <p>{{ results.quotes }}</p>
+            <p>{{ loading ? "Loading data..." : results.quotes }}</p>
             <br>
           </div>
           <p class="has-text-white">
-            💌 {{ results.author }}
+            💌 {{ loading ? "Loading data..." : results.author }}
           </p>
           <br>
           <div class="buttons is-centered">
