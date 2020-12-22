@@ -71,7 +71,7 @@ export default {
       {
         hid: 'og:image',
         property: 'og:image',
-        content: 'https://sanquotes.vercel.app/media/random-quotes.png'
+        content: 'https://quotes.santhoshveer.com/media/random-quotes.png'
       }
     ]
   },

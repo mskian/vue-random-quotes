@@ -11,7 +11,7 @@ export default {
       link: [
         {
           rel: 'canonical',
-          href: 'https://sanquotes.vercel.app' + this.$route.path
+          href: 'https://quotes.santhoshveer.com' + this.$route.path
         }
       ]
     }
