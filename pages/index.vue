@@ -54,8 +54,7 @@ export default {
   data () {
     return {
       showInstallPrompt: null,
-      results: {},
-      loading: false
+      results: {}
     }
   },
   async mounted () {
