@@ -106,9 +106,14 @@ export default {
     '@nuxtjs/bulma',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    '@nuxtjs/sitemap',
     '@nuxtjs/toast',
     'nuxt-clipboard2'
   ],
+  sitemap: {
+    hostname: 'https://quotes.santhoshveer.com',
+    exclude: ['/404']
+  },
   /*
    ** Add overriding info for meta items
    */
