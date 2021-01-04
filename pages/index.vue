@@ -40,6 +40,26 @@
           </div>
           <br>
           <br>
+          <div class="notification is-warning">
+            <br>
+            <p class="has-text-weight-bold has-text-centered">
+              Our Free Telegram Bot Just start and Get random Quotes.
+              <br>
+              <br>
+              <span class="buttons is-centered">
+                <a href="https://t.me/quoteswritten_bot" class="button is-danger read-random" target="_blank" rel="nofollow noopener">🤖 Start Bot</a>
+              </span>
+              <br>
+              This Web App was Dedicated to Quotes Lover ❤💚<br>
+              Quotes are Collected from Different Sources.
+            </p>
+            <br>
+            <div class="buttons is-centered">
+              <a href="https://github.com/mskian/vue-random-quotes" class="button is-success read-random" target="_blank" rel="nofollow noopener">📦 Souce Code</a>
+              <a href="https://github.com/mskian/quotes-data" class="btn button is-link read-random" target="_blank" rel="nofollow noopener">🗃 API Data</a>
+            </div>
+            <br>
+          </div>
         </div>
       </div>
     </div>
