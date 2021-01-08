@@ -77,6 +77,17 @@ export default {
       results: {}
     }
   },
+  head () {
+    return {
+      meta: [
+        {
+          hid: 'og:url',
+          property: 'og:url',
+          content: 'https://quotes.santhoshveer.com' + this.$route.path
+        }
+      ]
+    }
+  },
   async mounted () {
     this.showInstallPrompt = await intializePwa()
   },

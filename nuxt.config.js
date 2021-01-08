@@ -5,15 +5,23 @@ export default {
   target: 'static',
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    title: 'San Quotes',
+    title: 'San Quotes - Random Quotes 🔀',
     meta: [
       { charset: 'utf-8' },
       {
         name: 'X-UA-Compatible',
         content: 'IE=edge, chrome=1'
       },
+      {
+        name: 'HandheldFriendly',
+        content: 'True'
+      },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Get Real-time Random Quotes from Different Quote Categories.' },
+      { hid: 'description', name: 'description', content: 'San Quotes - Get Random Quotes from Different Quote Categories.' },
+      {
+        name: 'referrer',
+        content: 'no-referrer-when-downgrade'
+      },
       {
         name: 'mobile-web-app-capable',
         content: 'yes'
@@ -37,14 +45,59 @@ export default {
       {
         hid: 'og:image',
         property: 'og:image',
-        content: 'https://quotes.santhoshveer.com/media/random-quotes.png'
+        content: 'https://quotes.santhoshveer.com/media/random-quotes.jpg'
+      },
+      {
+        hid: 'twitter:title',
+        name: 'twitter:title',
+        content: 'San Quotes - Random Quotes 🔀'
+      },
+      {
+        hid: 'twitter:description',
+        name: 'twitter:description',
+        content: 'San Quotes - Get Random Quotes from Different Quote Categories.'
+      },
+      {
+        hid: 'twitter:image',
+        name: 'twitter:image',
+        content: 'https://quotes.santhoshveer.com/media/random-quotes.jpg'
+      },
+      {
+        hid: 'twitter:url',
+        name: 'twitter:url',
+        content: 'https://quotes.santhoshveer.com/'
+      },
+      {
+        hid: 'twitter:card',
+        name: 'twitter:card',
+        content: 'summary_large_image'
+      },
+      {
+        hid: 'twitter:site',
+        name: 'twitter:site',
+        content: '@santhoshveerece'
+      },
+      {
+        hid: 'twitter:creator',
+        name: 'twitter:creator',
+        content: '@santhoshveerece'
+      },
+      {
+        hid: 'twitter:label1',
+        name: 'twitter:label1',
+        content: 'Written by'
+      },
+      {
+        hid: 'twitter:data1',
+        name: 'twitter:data1',
+        content: '@santhoshveerece'
       }
     ],
     link: [
-      {
-        rel: 'shortcut icon',
-        href: '/icons/Icon-32.png'
-      },
+      // {
+      //  rel: 'shortcut icon',
+      //  href: '/icons/Icon-32.png'
+      // },
       {
         rel: 'apple-touch-icon',
         sizes: '48x48',
@@ -70,15 +123,53 @@ export default {
         sizes: '192x192',
         href: '/icons/Icon-192.png'
       },
-      {
-        rel: 'apple-touch-icon',
-        sizes: '512x512',
-        href: '/icons/Icon-512.png'
-      },
+      // {
+      //  rel: 'apple-touch-icon',
+      //  sizes: '512x512',
+      //  href: '/icons/Icon-512.png'
+      // },
       { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
       { rel: 'dns-prefetch', href: 'https://api.sanweb.info' },
       { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
-      { rel: 'dns-prefetch', href: 'https://cdn.jsdelivr.net' }
+      { rel: 'dns-prefetch', href: 'https://cdn.jsdelivr.net' },
+      {
+        rel: 'alternate',
+        type: 'application/rss+xml',
+        title: 'San Quotes - Random Quotes 🔀',
+        href: 'https://quotes.santhoshveer.com/feed.xml'
+      }
+    ],
+    script: [
+      {
+        type: 'application/ld+json',
+        json: {
+          '@context': 'http://schema.org',
+          '@type': 'Website',
+          publisher: {
+            '@type': 'Organization',
+            name: 'San Quotes - Random Quotes 🔀',
+            url: 'https://quotes.santhoshveer.com/',
+            logo: {
+              '@type': 'ImageObject',
+              url: 'https://quotes.santhoshveer.com/icons/Icon-72.png',
+              width: 72,
+              height: 72
+            }
+          },
+          url: 'https://quotes.santhoshveer.com/',
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://quotes.santhoshveer.com/media/random-quotes.jpg',
+            width: 1280,
+            height: 720
+          },
+          mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': 'https://quotes.santhoshveer.com/'
+          },
+          description: 'San Quotes - Get Random Quotes from Different Quote Categories.'
+        }
+      }
     ]
   },
   loading: { color: '#e84b0d' },
@@ -108,23 +199,43 @@ export default {
     '@nuxtjs/pwa',
     '@nuxtjs/sitemap',
     '@nuxtjs/toast',
-    'nuxt-clipboard2'
+    'nuxt-clipboard2',
+    '@nuxtjs/feed'
   ],
   sitemap: {
     hostname: 'https://quotes.santhoshveer.com',
-    exclude: ['/404']
+    exclude: ['/404'],
+    defaults: {
+      changefreq: 'daily',
+      priority: 1,
+      lastmod: new Date()
+    }
   },
+  feed: [
+    {
+      path: '/feed.xml',
+      create (feed) {
+        feed.options = {
+          title: 'San Quotes - Random Quotes 🔀',
+          link: 'https://quotes.santhoshveer.com/',
+          description: 'San Quotes - Get Random Quotes from Different Quote Categories.'
+        }
+      },
+      cacheTime: 1000 * 60 * 15,
+      type: 'rss2'
+    }
+  ],
   /*
    ** Add overriding info for meta items
    */
   meta: {
-    name: 'San Quotes', // this is needed to change title for all PWA meta tags
-    description: 'Get Real-time Random Quotes from Different Quote Categories.' // this is needed to change title for all PWA meta tags
+    name: 'San Quotes - Random Quotes 🔀', // this is needed to change title for all PWA meta tags
+    description: 'San Quotes - Get Random Quotes from Different Quote Categories.' // this is needed to change title for all PWA meta tags
   },
   manifest: {
     name: 'San Quotes',
     short_name: 'San Quotes',
-    description: 'Get Real-time Random Quotes from Different Quote Categories.',
+    description: 'San Quotes - Get Random Quotes from Different Quote Categories.',
     icons: [
       {
         src: '/icons/Icon-48.png',
