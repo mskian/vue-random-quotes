@@ -281,6 +281,23 @@ export default {
   pwa: {
     icon: false // disables the icon module
   },
+  workbox: {
+    dev: false,
+    runtimeCaching: [
+      {
+        urlPattern: 'https://fonts.googleapis.com/.*',
+        handler: 'cacheFirst',
+        method: 'GET',
+        strategyOptions: { cacheableResponse: { statuses: [0, 200] } }
+      },
+      {
+        urlPattern: 'https://fonts.gstatic.com/.*',
+        handler: 'cacheFirst',
+        method: 'GET',
+        strategyOptions: { cacheableResponse: { statuses: [0, 200] } }
+      }
+    ]
+  },
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
     postcss: {
