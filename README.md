@@ -6,7 +6,7 @@ San Quotes - Get Random Quotes from Different Quote Categories.
 
 ## Features ✨
 
-- Realtime Words data
+- Realtime Quotes data
 - Progressive Web App
 - Sitemap
 - RSS feed
