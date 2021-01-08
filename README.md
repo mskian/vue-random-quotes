@@ -1,10 +1,36 @@
-# Vue Random Quotes
+# San Quotes 🔀
 
 ![build-test](https://github.com/mskian/vue-random-quotes/workflows/build-test/badge.svg)  
 
-Get Real-time Random Quotes from Different Quote Categories.
+San Quotes - Get Random Quotes from Different Quote Categories.
 
-## Build Setup
+## Features ✨
+
+- Realtime Words data
+- Progressive Web App
+- Sitemap
+- RSS feed
+- SEO and Social Meta Tags
+- Schema Markup
+- Canonical URL
+- Offline Support
+- Mobile Responsive (Build using Bulma CSS Framework)
+
+## API 🍘
+
+API - [@QuotesData](https://github.com/mskian/quotes-data)
+
+Scrape Quotes with Author Name from Different API Source and converted into Self-Hosted JSON API.
+
+## Built with ⚙
+
+- HTML
+- CSS, Bulma CSS Framework
+- JavaScript
+- Vue
+- Nuxt
+
+## Build Setup 📦
 
 ```bash
 # install dependencies
@@ -21,8 +47,6 @@ $ yarn start
 $ yarn generate
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
-
-## LICENSE
+## LICENSE ✅
 
 MIT
