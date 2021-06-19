@@ -70,6 +70,7 @@
 import axios from 'axios'
 import { debounce } from 'lodash'
 import intializePwa from '~/helpers/pwa'
+import 'bulma/css/bulma.css'
 export default {
   data () {
     return {
