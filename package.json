@@ -1,15 +1,15 @@
 {
   "name": "vue-random-quotes",
   "description": "San Quotes - Get Random Quotes from Different Quote Categories.",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "author": "Santhosh Veer",
   "license": "MIT",
   "private": true,
   "scripts": {
     "dev": "nuxt",
-    "build": "nuxt generate --fail-on-page-error",
+    "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt build",
+    "generate": "nuxt generate --fail-on-page-error",
     "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "lint": "yarn lint:js",
     "lintfix": "eslint --fix --ext .js,.vue --ignore-path .gitignore ."
